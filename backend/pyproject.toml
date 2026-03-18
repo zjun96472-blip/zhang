@@ -1,0 +1,33 @@
+[project]
+name = "shopmate-backend"
+version = "0.1.0"
+description = "ShopMate backend powered by LangGraph, Milvus, MySQL, Redis, and Qwen3-Max."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.34.0",
+  "sqlalchemy>=2.0.38",
+  "pymysql>=1.1.1",
+  "redis>=5.2.1",
+  "pydantic-settings>=2.7.1",
+  "langchain-core>=0.3.37",
+  "langchain-openai>=0.3.8",
+  "langgraph>=0.2.74",
+  "pymilvus>=2.5.4",
+  "orjson>=3.10.15",
+  "httpx>=0.28.1",
+  "cryptography>=45.0.0",
+  "passlib[bcrypt]>=1.7.4",
+  "bcrypt<4.1",
+  "PyJWT>=2.10.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.4",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
